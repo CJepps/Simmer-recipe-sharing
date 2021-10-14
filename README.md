@@ -1,108 +1,106 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Simmer - Share your culinary secrets! 
+---
+## Table of Contents
+1. [**UX**](#ux)
+    - [**Strategy**](#Strategy)
+    - [**User Stories**](#user-stories)
+    - [**Scope**](#Scope)
+    - [**Design**](#design)
+        - [**Framework**](#framework)
+        - [**Color Scheme**](#color-scheme)
+        - [**Icons**](#icons)
+        - [**Typography**](#typography)
+    - [**Wireframes**](#wireframes)
 
-Welcome USER_NAME,
+2. [**Features**](#features)
+    - [**Existing Features**](#existing-features)
+    - [**Features Left to Implement**](#features-left-to-implement)
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+3. [**Technologies Used**](#technologies-used)
+   
+    - [**Front-End Technologies**](#front-end)
+    - [**Back-End Technologies**](#back-end)
+    - [**Libraries**](#Libraries) 
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+4. [**Testing**](#testing)
+    
 
-## Gitpod Reminders
+5. [**Deployment**](#deployment)
+    
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
-
-`python3 -m http.server`
-
-A blue button should appear to click: _Make Public_,
-
-Another blue button should appear to click: _Open Browser_.
-
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
-
-A blue button should appear to click: _Make Public_,
-
-Another blue button should appear to click: _Open Browser_.
-
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
-
-To log into the Heroku toolbelt CLI:
-
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
-
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
-
-------
-
-## Release History
-
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
-
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
-
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
-
-**July 2 2021:** Remove extensions that are not available in Open VSX.
-
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
-
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
-
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
-
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
-
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
-
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
-
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
-
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
-
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
-
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
-
-------
-
-## FAQ about the uptime script
-
-**Why have you added this script?**
-
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
-
-**How will this affect me?**
-
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
-
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
-
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
-
-**So….?**
-
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
-
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
 
 ---
 
-Happy coding!
+## UX
+
+### Strategy
+
+The main requirements of this project was to create a recipe sharing platform that appeals to a large audience of home cooks. To achieve this, the website needs to be simple to use and understand and also has to look visually appealing. 
+
+### User stories
+
+As a User I want ....
+
+- To view the site from a range of devices with different resolutions  
+- To be able to easily navigate the website and find my appropriate section
+- To be able to create a profile in which to create and edit my own recipes  
+- To be able to delete only my own recipes 
+- To view recipes that have been created by other users without signing up
+- To be able to search for other user's recipes by keywords
+
+As a Business I want ....
+
+- The landing page to be eyecatching and attractive to entice users to sign up
+- The potential to advertise cooking equipment based on the equipment required in the recipe 
+- The website to be fully responsive on all devices and browsers to appeal to all users
+
+### Scope
+
+- Home page that encourages users to register with a call to action as the first section they encounter. Also displays a random selection of recipes submitted by other users.
+- Navigation bar that persists throughout the entire site. Links to Homepage, Recipe section, login, sign up, logout.
+- Form for registered users to use to submit recipe details.
+- Functionality for registered users to Create, read, update, and delete (CRUD) recipes.
+- Recipe section that displays users' recipes as a gallery of cards.
+- Recipe section search bar that alows users to search for recipes based on keywords.
+- login/signup forms that alow users to access their recipes to edit using a password. 
+
+
+
+### Design
+
+#### Framework
+I chose to use a bootstrap template to enable me to spend more development time writing the code for the backend of the website. I would then write custom html and css to personalise the website. 
+#### Color scheme
+
+I used the website: Coolers to create a color palette for my website. After selecting an appropriate Hero image I could use this to generate a color palette. I wanted the website to look fresh and vibrant to complement the ingredients used in the recipes. 
+
+- E8EEDC Beige
+- A37A74 Burnished Brown
+- 6A9DB5 Air Superiority Blue
+- 698654 Russian Green 
+- 2D2F30 Jet
+#### Icons
+I chose to use Font awesome to provide icons for my Navigation bar titles. 
+#### Typography
+For this project I chose to stick to two fonts to maintain consistency across the website. These were provided by Google fonts. 
+
+- Quicksand - For titles and headings
+- Raleway - For all other text. 
+
+### Wireframes
+
+You can view the wireframes used for this project here
+ 
+---
+## Features
+### Existing Features
+### Features left to implement 
+---
+## Technologies used
+### Front end 
+### Back end
+### Libraries 
+---
+## Testing 
+---
+## Deployment 
