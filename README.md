@@ -84,8 +84,8 @@ I chose to use Font awesome to provide icons for my Navigation bar titles.
 #### Typography
 For this project I chose to stick to two fonts to maintain consistency across the website. These were provided by Google fonts. 
 
-- Quicksand - For titles and headings
-- Raleway - For all other text. 
+- Montserrat - For titles and headings
+- Roboto - For all other text. 
 
 ### Wireframes
 
