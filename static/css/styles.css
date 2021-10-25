@@ -236,11 +236,11 @@ sup {
 }
 
 a {
-  color: #ffc800;
+  color: #E8EEDC;
   text-decoration: underline;
 }
 a:hover {
-  color: #cca000;
+  color: #E8EEDC;
 }
 
 a:not([href]):not([class]), a:not([href]):not([class]):hover {
@@ -3030,17 +3030,17 @@ textarea.form-control-lg {
 }
 
 .btn-primary {
-  color: #fff;
-  background-color: #ffc800;
-  border-color: #ffc800;
+  color: #E8EEDC;
+  background-color: #698654;
+  border-color: #698654;
 }
 .btn-primary:hover {
-  color: #fff;
-  background-color: #d9aa00;
-  border-color: #cca000;
+  color: #E8EEDC;
+  background-color: #649443;
+  border-color: #649443;
 }
 .btn-check:focus + .btn-primary, .btn-primary:focus {
-  color: #fff;
+  color: #E8EEDC;
   background-color: #d9aa00;
   border-color: #cca000;
   box-shadow: 0 0 0 0.25rem rgba(255, 208, 38, 0.5);
@@ -11409,7 +11409,7 @@ header.masthead {
   padding-top: 10.5rem;
   padding-bottom: 6rem;
   text-align: center;
-  color: #fff;
+  color: #E8EEDC;
   background-image: url("../assets/img/hero-image.jpg");
   background-repeat: no-repeat;
   background-attachment: scroll;
