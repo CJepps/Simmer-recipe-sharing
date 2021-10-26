@@ -30,8 +30,29 @@ def home():
     return render_template("home.html")
 
 
-@app.route("/login")
+@app.route("/login", methods=["GET", "POST"])
 def login():
+    if request.method == "POST":
+        # checks if username already exists
+        existing_user = mongo.db.users.find_one(
+            {"username": request.form.get("username").lower()})
+
+        if existing_user:
+            # checks password matches user input 
+            if check_password_hash(
+                existing_user["password"], request.form.get("password")):
+                    session["user"] = request.form.get("username").lower()
+                    flash("Welcome, {}".format(request.form.get("username")))
+            else:
+                # invalid password
+                flash("Incorrect Username and/or Password")
+                return redirect(url_for("login"))
+
+        else:
+            # username is not in database
+            flash("Incorrect Username and/or Password")
+            return redirect(url_for("login"))
+
     return render_template("login.html")
 
 
@@ -61,7 +82,7 @@ def register():
         session["user"] = request.form.get("username").lower()
         flash("Registration Successful!")
     return render_template("register.html")
-
+   
 
 @app.route("/edit_recipes")
 def edit_recipes():
