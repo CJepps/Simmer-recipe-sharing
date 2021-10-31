@@ -3,27 +3,35 @@
 
 <h3 class="">Add Recipe</h3>
 
-<form class="col s12" method="POST" action="">
-    <div class="form-row">
+<form class="col s12" method="POST" action="{{ url_for("add_recipe") }}>
+    <div class="form-row ">
       <div class="form-group col-md-6">
-        <label for="recipe-title">Recipe Title</label>
-        <input type="text" class="form-control" id="recipe-title">
+        <label for="recipe_title">Recipe Title</label>
+        <input type="text" name="recipe_title" class="form-control validate" id="recipe_title" minlength="5" maxlength="50" required>
       </div>
+    </div>
+    <div class="form-row"> 
       <div class="form-group col-md-6">
-        <label for="recipe-url">Recipe Image Url</label>
-        <input type="text" class="form-control" id="recipe-url">
+        <label for="recipe_image_url">Recipe Image Url</label>
+        <input type="text" name="recipe_image_url" class="form-control validate" id="recipe_image_url">
       </div>
+    </div>
+    <div class="form-row"> 
       <div class="form-group col-md-6">
-        <label for="ingredients">Ingredients</label>
-        <textarea type="text" class="form-control" id="ingredients"></textarea>
+        <label for="recipe_ingredients">Ingredients</label>
+        <textarea type="text" name="recipe_ingredients" class="form-control validate" id="recipe_ingredients" required></textarea>
       </div>
+    </div>
+    <div class="form-row">  
       <div class="form-group col-md-6">
-        <label for="method">Recipe Method</label>
-        <textarea type="text" class="form-control" id="method"></textarea>
+        <label for="recipe_method">Recipe Method</label>
+        <textarea type="text" name="recipe_method" class="form-control validate" id="recipe_method" required></textarea>
       </div>
+    </div>
+    <div class="form-row">  
       <div class="form-group col-md-6">
-        <label for="cook-time">Total Cooking time (minutes)</label>
-        <select class="form-control" id="cook-time">
+        <label for="recipe_cooking_time">Total Cooking time (minutes)</label>
+        <select class="form-control validate" name="recipe_cooking_time" id="recipe_cooking_time">
           <option>10</option>
           <option>20</option>
           <option>30</option>
@@ -49,8 +57,11 @@
         </select>
       </div>
     </div>
-    
-    <button type="submit" class="btn btn-primary">Submit Recipe</button>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <button type="submit" class="btn btn-primary">Submit Recipe</button>
+        </div>    
+    </div>    
   </form>
 
 

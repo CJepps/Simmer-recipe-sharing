@@ -108,9 +108,23 @@ def edit_recipes():
     return render_template("edit_recipes.html")
 
 
-@app.route("/add_recipe")
+@app.route("/add_recipe", methods=["GET", "POST"])
 def add_recipe():
+    if request.method == "POST":
+        new_recipe = {
+            "recipe_title": request.form.get("recipe_title"),
+            "recipe_image_url": request.form.get("recipe_image_url"),
+            "recipe_ingredients": request.form.get("recipe_ingredients"),
+            "recipe_method": request.form.get("recipe_method"),
+            "recipe_cooking_time": request.form.get("recipe_cooking_time"),
+            "created_by": session["user"]
+        }
+        mongo.db.recipes.insert_one(new_recipe)
+        flash("Recipe Successfully added, thank you")
+        return redirect(url_for("get_recipes"))
+
     return render_template("add_recipe.html")
+
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
