@@ -1,13 +1,29 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <h2>im extending the base template</h2>
+    <h2>Recipes</h2>
+
+    
 
     {% for recipe in recipes %}
-       {{ recipe.recipe_title }}<br>
-       {{ recipe.recipe_image_url}}<br>
-       {{ recipe.recipe_ingredients}}<br>
-       {{ recipe.recipe_method}}<br>
+    <div class="row">
+        <div class="col-lg-4 col-sm-6 mb-4">
+            <!-- recipe item 1-->
+            <div class="portfolio-item">
+                <a class="portfolio-link" data-bs-toggle="modal" href="INSERT RANDOM RECIPE LINK HERE">
+                    <div class="portfolio-hover">
+                        <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                    </div>
+                    <img class="img-fluid" src="{{ recipe.recipe_image_url}}" />
+                </a>
+                <div class="portfolio-caption">
+                    <div class="portfolio-caption-heading">{{ recipe.recipe_title }}</div>
+                    
+                </div>
+            </div>
+        </div>
+        
+    </div>
     {% endfor %}
-
+    
 {% endblock %}
