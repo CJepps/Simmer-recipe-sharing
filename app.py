@@ -1,6 +1,6 @@
 import os
 from flask import (
-    Flask, flash, render_template,
+    Flask, flash, render_template, 
     redirect, request, session, url_for)
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
@@ -18,13 +18,13 @@ app.secret_key = os.environ.get("SECRET_KEY")
 mongo = PyMongo(app)
 
 
-@app.route("/")
 @app.route("/get_recipes")
 def get_recipes():
-    recipes = list(mongo.db.recipes.find())
+    recipes = mongo.db.recipes.find()
     return render_template("recipes.html", recipes=recipes)
 
 
+@app.route("/")
 @app.route("/home")
 def home():
     return render_template("home.html")
@@ -67,7 +67,7 @@ def profile(username):
     if session["user"]:
         return render_template("profile.html", username=username)
 
-    return redirect(url_for("login"))
+    return redirect(url_for("login"))    
 
 
 @app.route("/logout")
@@ -101,7 +101,7 @@ def register():
         return redirect(url_for("profile", username=session["user"]))
 
     return render_template("register.html")
-
+   
 
 @app.route("/edit_recipes")
 def edit_recipes():
@@ -129,4 +129,4 @@ def add_recipe():
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
-            debug=True)
+            debug=True)    

@@ -3,7 +3,7 @@
 
 <h3 class="">Add Recipe</h3>
 
-<form class="col s12" method="POST" action="{{ url_for("add_recipe") }}>
+<form class="col s12" method="POST" action="{{ url_for("add_recipe") }}">
     <div class="form-row ">
       <div class="form-group col-md-6">
         <label for="recipe_title">Recipe Title</label>
@@ -57,11 +57,11 @@
         </select>
       </div>
     </div>
-    <div class="form-row">
-        <div class="form-group col-md-6">
-            <button type="submit" class="btn btn-primary">Submit Recipe</button>
-        </div>    
-    </div>    
+    <div>
+      <button>
+          <a  class="btn btn-primary" type="submit">Register</a>
+      </button>
+  </div>
   </form>
 
 
