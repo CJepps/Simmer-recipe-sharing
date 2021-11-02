@@ -3,8 +3,21 @@
 
     <h2>Recipes</h2>
 
-    
+    <form  action="{{ url_for('search') }}" method= "post" class="input-group">                      <!--search bar for recipes. taken from https://mdbootstrap.com/docs/standard/forms/search/-->
+        <div class="form-outline">
+          <input type="text" id="query" name="query" class="form-control validate" minlength="3" required/>
+          <label class="form-label" for="query">Search</label>
+        </div>
+        <div>
+            <a href="{{ url_for('get_recipes') }}" role="button" class="btn btn-primary">Reset</a>
+            <button type="submit" class="btn btn-primary">
+                <i class="fas fa-search left"></i>    
+            </button>
+        </div>    
+    </form>
 
+    
+    
     {% for recipe in recipes %}
     <div class="row">
         <div class="col-lg-4 col-sm-6 mb-4">
@@ -30,5 +43,6 @@
         
     </div>
     {% endfor %}
+    
     
 {% endblock %}

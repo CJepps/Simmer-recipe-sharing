@@ -16,17 +16,19 @@
                     <h3 class="section-subheading text-muted">Explore now</h3>
                 </div>
 
-                <section class="input-group">                      <!--search bar for recipes. taken from https://mdbootstrap.com/docs/standard/forms/search/-->
+                <form  action="{{ url_for('search') }}" method= "post" class="input-group">                      <!--search bar for recipes. taken from https://mdbootstrap.com/docs/standard/forms/search/-->
                     <div class="form-outline">
-                      <input type="search" id="form1" class="form-control" />
-                      <label class="form-label" for="form1">Search</label>
+                      <input type="text" id="query" name="query" class="form-control validate" minlength="3" required/>
+                      <label class="form-label" for="query">Search</label>
                     </div>
-                    <button type="button" class="btn btn-primary">
-                      <i class="fas fa-search"></i>
-                    </button>
-                </section>
+                    <div>
+                        <button type="submit" class="btn btn-primary"> 
+                            <i class="fas fa-search"></i>    
+                        </button>
+                    </div>    
+                </form>
                 
-                {% for recipe in recipes%}
+                {% for recipe in recipes %}
                 <div class="row">
                     <div class="col-lg-4 col-sm-6 mb-4">
                         <!-- recipe item 1-->
@@ -46,6 +48,7 @@
                     
                 </div>
                 {% endfor %}
+                
             </div>
         </section>
 
