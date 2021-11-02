@@ -24,7 +24,7 @@ def get_recipes():
     return render_template("recipes.html", recipes=recipes)
 
 
-@app.route("/search", methods=["GET", "POST"])                       #searchbar function can i add a function to flash a message when no results are returned from index?
+@app.route("/search", methods=["GET", "POST"])                
 def search():
     query = request.form.get("query")
     recipes = mongo.db.recipes.find({"$text": {"$search": query}})
@@ -45,7 +45,7 @@ def login():
             {"username": request.form.get("username").lower()})
 
         if existing_user:
-            # checks password matches user input 
+            # checks password matches user input
             if check_password_hash(
                 existing_user["password"], request.form.get("password")):
                     session["user"] = request.form.get("username").lower()
@@ -151,6 +151,7 @@ def delete_recipe(recipe_id):
     mongo.db.recipes.remove({"_id": ObjectId(recipe_id)})
     flash("Recipe Deleted")
     return redirect(url_for("get_recipes"))
+
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
