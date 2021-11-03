@@ -88,6 +88,14 @@ body {
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
+body {
+  padding-top: 60px;
+}
+@media (max-width: 979px) {
+  body {
+    padding-top: 0px;
+  }
+}
 
 hr {
   margin: 1rem 0;
@@ -11777,7 +11785,7 @@ section#contact form#contactForm :-ms-input-placeholder {
   text-align: center;
   font-size: 0.9rem;
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  
+  background-color: #101214;
 }
 
 
@@ -11788,5 +11796,17 @@ section#contact form#contactForm :-ms-input-placeholder {
   margin-top: 300px;
 }
 
+#mainNav {
+  margin-bottom: 0px;
+}
+
+#simmer-logo-text {
+  color: white;
+  float: right;
+}
+
+.fa-utensils {
+  color:#698654;
+}
 
 
