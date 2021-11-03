@@ -11783,4 +11783,10 @@ section#contact form#contactForm :-ms-input-placeholder {
 
 /* Custom CSS */
 
-#searchbar {}
+.row-flash {
+  background-color: #0aa2c0;
+  margin-top: 300px;
+}
+
+
+

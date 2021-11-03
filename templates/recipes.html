@@ -1,48 +1,43 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <h2>Recipes</h2>
+    <h2 class="d-flex justify-content-center">Recipes</h2>
 
-    <form  action="{{ url_for('search') }}" method= "post" class="input-group">                      <!--search bar for recipes. taken from https://mdbootstrap.com/docs/standard/forms/search/-->
+    <form  action="{{ url_for('search') }}" method= "post" class="input-group d-flex justify-content-center">                      <!--search bar for recipes. taken from https://mdbootstrap.com/docs/standard/forms/search/-->
         <div class="form-outline">
           <input type="text" id="query" name="query" class="form-control validate" minlength="3" required/>
           <label class="form-label" for="query">Search</label>
         </div>
         <div>
-            <a href="{{ url_for('get_recipes') }}" role="button" class="btn btn-primary">Reset</a>
             <button type="submit" class="btn btn-primary">
                 <i class="fas fa-search left"></i>    
             </button>
+            <a href="{{ url_for('get_recipes') }}" role="button" class="btn btn-primary">Reset</a>    
         </div>    
     </form>
 
     
     
-    {% for recipe in recipes %}
-    <div class="row">
-        <div class="col-lg-4 col-sm-6 mb-4">
-            
-            <div class="portfolio-item">
-                {% if session.user|lower == recipe.created_by|lower %}        <!-- if statement only shows edit recipe buttons to the user that created the recipe-->
-                    <a role="button" class="btn btn-outline-primary" href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}">Edit Recipe</a>
-                    <a role="button" class="btn btn-outline-danger" href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}">Delete Recipe</a>
-                {% endif %}
-                <a class="portfolio-link" data-bs-toggle="modal" href="">
-                    <div class="portfolio-hover">
-                        <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                    </div>
-                    <img class="img-fluid" src="{{ recipe.recipe_image_url}}" />
-                </a>
-                <div class="portfolio-caption">
-                    <div class="portfolio-caption-heading">{{ recipe.recipe_title }}</div>
-                    
-                </div>
-                <p><em>by: {{ recipe.created_by }}</em></p>
-            </div>
-        </div>
-        
-    </div>
-    {% endfor %}
     
+    {% for recipe in recipes %}
+        <div class="container">
+            <div class="card-deck ">                                  <!--created with help from the card documentation at https://getbootstrap.com/docs/4.0/components/card/#using-custom-css-->
+                <div class="card mb-4">
+                <img class="card-img-top" src="{{ recipe.recipe_image_url}}" alt="recipe image">
+                <div class="card-body">
+                    <h5 class="card-title">{{ recipe.recipe_title }}</h5>
+                    <p class="card-text"></p>
+                    {% if session.user|lower == recipe.created_by|lower %}        <!-- if statement only shows edit recipe buttons to the user that created the recipe-->
+                            <a role="button" class="btn btn-outline-primary" href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}">Edit Recipe</a>
+                            <a role="button" class="btn btn-outline-danger" href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}">Delete Recipe</a>
+                        {% endif %}
+                </div>
+                <div class="card-footer">
+                    <small class="text-muted"><em>by: {{ recipe.created_by }}</em></small>
+                </div>
+                </div>
+            </div>
+        </div>        
+    {% endfor %}
     
 {% endblock %}
