@@ -1,4 +1,6 @@
-import os                                                              #entire app.py created using the code institute tutorial for the mini project by Tim Nelson 
+# entire app.py created using the code institute tutorial 
+# for the mini project by Tim Nelson.
+import os                                                              
 from flask import (
     Flask, flash, render_template, 
     redirect, request, session, url_for)
