@@ -1,4 +1,4 @@
-import os
+import os                                                              #entire app.py created using the code institute tutorial for the mini project by Tim Nelson 
 from flask import (
     Flask, flash, render_template, 
     redirect, request, session, url_for)
@@ -156,4 +156,4 @@ def delete_recipe(recipe_id):
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
-            debug=True)    
+            debug=False)    

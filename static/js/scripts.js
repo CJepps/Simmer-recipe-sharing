@@ -6,7 +6,7 @@
 //
 // Scripts
 // 
-
+/* credit to https://startbootstrap.com/theme/agency for js */
 window.addEventListener('DOMContentLoaded', event => {
 
     // Navbar shrink function

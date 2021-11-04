@@ -11809,4 +11809,11 @@ section#contact form#contactForm :-ms-input-placeholder {
   color:#698654;
 }
 
+form { 
+  margin: 0 auto; 
+  width:250px;
+  margin-top: 25px;
+  padding-top: 25px;
+  }
+
 
