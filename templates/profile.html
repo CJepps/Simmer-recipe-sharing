@@ -11,29 +11,43 @@
     
 </div>
 
-<div class="user_recipe_section">
-  <div>
-    <h3 class="d-flex justify-content-center">Your recipes</h3>
-    
-  </div>
- 
-</div>
-{% for recipe in recipes %}
-{% if session.user|lower == recipe.created_by|lower %}  
-    <div class="container">
-        <div class="card-columns ">                                  <!--created with help from the card documentation at https://getbootstrap.com/docs/4.0/components/card/#using-custom-css-->
-            <div class="card mb-4">
-            <img class="card-img-top" src="{{ recipe.recipe_image_url}}" alt="recipe image">
-            <div class="card-body">
-                <h5 class="card-title">{{ recipe.recipe_title }}</h5>
-                <p class="card-text"></p>
-                <a role="button" class="btn btn-outline-primary" href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}">Edit Recipe</a>
-                <a role="button" class="btn btn-outline-danger" href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}">Delete Recipe</a>
+
+
+<div class="container">
+  <!--User account sidebar-->
+  <div class="row user_account">
+    change password section?
+    <!--User recipe card if exists/ else add recipe button-->
+    <div class="col-md-9">
+      <div class="account_info">
+        <h2 class="heading-primary">{{ username }}'s Recipes</h2>
+        <div class="container-fluid">
+            <div class="row">
+              {% for user_recipe in user_recipes %}
+              <div class="col-sm-12 col-md-6 my-3">
+                  <div class="card card_recipe">
+                      <img src="{{ user_recipe.image }}" alt="Recipe Image" class="img-fluid">
+                      <div class="card-img-overlay">
+                          <h6 class="card_title">{{ user_recipe.recipe_name }}</h6>   
+                      </div>
+                  </div>
+              </div>
+              {% else %}
+              <div class="col-sm-12 col-md-6">
+                <h3 class="heading mb-5">Looks like you haven't created any recipes yet.</h3>
+                <h3 class="heading mb-5">Create one here.</h3>
+                <a class="btn btn-primary" href="{{ url_for('add_recipe')}}" role="button">Add Recipe</a>
+              </div>
+              {% endfor %}
             </div>
         </div>
-    </div> 
-{% endif %}
-{% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
 
 
 

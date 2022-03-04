@@ -1,8 +1,12 @@
-html, body {
-  min-height: 100%;
-}
+
 
 @charset "UTF-8";     /* css file from https://startbootstrap.com/theme/agency */
+
+html, body {
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+}
 
 :root {
   --bs-blue: #0d6efd;
@@ -11783,6 +11787,9 @@ section#contact form#contactForm :-ms-input-placeholder {
   font-size: 0.9rem;
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   background-color: #101214;
+  position:absolute;
+  bottom:0;
+  width:100%;   
 }
 
 
