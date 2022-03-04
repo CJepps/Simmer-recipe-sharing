@@ -1,8 +1,8 @@
-# entire app.py created using the code institute tutorial 
+# entire app.py created using the code institute tutorial
 # for the mini project by Tim Nelson.
-import os                                                              
+import os
 from flask import (
-    Flask, flash, render_template, 
+    Flask, flash, render_template,
     redirect, request, session, url_for)
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
@@ -26,7 +26,7 @@ def get_recipes():
     return render_template("recipes.html", recipes=recipes)
 
 
-@app.route("/search", methods=["GET", "POST"])                
+@app.route("/search", methods=["GET", "POST"])
 def search():
     query = request.form.get("query")
     recipes = mongo.db.recipes.find({"$text": {"$search": query}})
@@ -48,12 +48,11 @@ def login():
 
         if existing_user:
             # checks password matches user input
-            if check_password_hash(
-                existing_user["password"], request.form.get("password")):
-                    session["user"] = request.form.get("username").lower()
-                    flash("Welcome, {}".format(request.form.get("username")))
-                    return redirect(url_for(
-                        "profile", username=session["user"]))
+            if check_password_hash(existing_user["password"], request.form.get("password")):
+                session["user"] = request.form.get("username").lower()
+                flash("Welcome, {}".format(request.form.get("username")))
+                return redirect(url_for(
+                    "profile", username=session["user"]))
             else:
                 # invalid password
                 flash("Incorrect Username and/or Password")
@@ -76,12 +75,12 @@ def profile(username):
     if session["user"]:
         return render_template("profile.html", username=username)
 
-    return redirect(url_for("login"))    
+    return redirect(url_for("login"))
 
 
 @app.route("/logout")
 def logout():
-    # Removes user from session cookies 
+    # Removes user from session cookies
     flash("You have been logged out.")
     session.pop("user")
     return redirect(url_for("login"))
@@ -158,4 +157,4 @@ def delete_recipe(recipe_id):
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
-            debug=False)    
+            debug=True)

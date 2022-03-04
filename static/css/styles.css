@@ -1,4 +1,8 @@
-@charset "UTF-8";     /* css file from https://startbootstrap.com/theme/agency
+html, body {
+  min-height: 100%;
+}
+
+@charset "UTF-8";     /* css file from https://startbootstrap.com/theme/agency */
 
 :root {
   --bs-blue: #0d6efd;
@@ -335,6 +339,8 @@ label {
 button {
   border-radius: 0;
 }
+
+
 
 button:focus:not(:focus-visible) {
   outline: 0;
@@ -3031,6 +3037,7 @@ textarea.form-control-lg {
   color: #E8EEDC;
   background-color: #698654;
   border-color: #698654;
+  margin-top: 5px;
 }
 .btn-primary:hover {
   color: #E8EEDC;
@@ -11806,4 +11813,18 @@ form {
   padding-top: 25px;
   }
 
+  main.container-fluid {
+    padding-top: 0;
+    padding-left: 0;
+    padding-right: 0;
+}
 
+body { padding-bottom: 70px; }
+
+.card-body {
+  margin-top: 10vh;
+}
+
+main.container-fluid {
+  height: 80vh;
+}
