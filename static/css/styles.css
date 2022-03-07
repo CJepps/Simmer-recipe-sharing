@@ -3,7 +3,7 @@
 @charset "UTF-8";     /* css file from https://startbootstrap.com/theme/agency */
 
 html, body {
-  min-height: 100%;
+  height: 100%;
   margin: 0;
   padding: 0;
 }
@@ -6956,7 +6956,7 @@ textarea.form-control-lg {
 }
 
 .w-50 {
-  width: 50% !important;
+  width: 100% !important;
 }
 
 .w-75 {
@@ -11788,7 +11788,6 @@ section#contact form#contactForm :-ms-input-placeholder {
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   background-color: #101214;
   position:absolute;
-  bottom:0;
   width:100%;   
 }
 
@@ -11826,12 +11825,21 @@ form {
     padding-right: 0;
 }
 
-body { padding-bottom: 70px; }
 
 .card-body {
-  margin-top: 10vh;
+  
 }
 
 main.container-fluid {
-  height: 80vh;
+  height: auto;
+}
+
+.add_recipe_form {
+  padding-top: 10vh;
+  padding-bottom: 10vh;
+  align-content: center;
+}
+
+.searchbar {
+  align-items: end;
 }

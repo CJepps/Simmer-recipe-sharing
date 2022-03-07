@@ -3,10 +3,9 @@
 
     <h2 class="d-flex justify-content-center">Recipes</h2>
 
-    <form  action="{{ url_for('search') }}" method= "post" class="input-group d-flex justify-content-center">                      <!--search bar for recipes. taken from https://mdbootstrap.com/docs/standard/forms/search/-->
+    <form  action="{{ url_for('search') }}" method= "post" class="input-group d-flex justify-content-center searchbar">                      <!--search bar for recipes. taken from https://mdbootstrap.com/docs/standard/forms/search/-->
         <div class="form-outline">
           <input type="text" id="query" name="query" placeholder="Search your recipe here" class="form-control validate" minlength="3" required/>
-          <label class="form-label" for="query">Search</label>
         </div>
         <div>
             <button type="submit" class="btn btn-primary">

@@ -3,47 +3,48 @@
 
 <h3 class="">Add Recipe</h3>
 
-<form class="col s12 col col-md-6 " method="POST" action="{{ url_for("add_recipe") }}">
-    <div class="form-row ">
-      <div class="form-group col-md-6">
-        <label for="recipe_title">Recipe Title</label>
-        <input type="text" name="recipe_title" class="form-control validate" id="recipe_title" minlength="5" maxlength="50" required>
-      </div>
-    </div>
-    <div class="form-row"> 
-      <div class="form-group col-md-6">
-        <label for="recipe_image_url">Recipe Image Url</label>
-        <input type="text" name="recipe_image_url" class="form-control validate" id="recipe_image_url">
-      </div>
-    </div>
-    <div class="form-row"> 
-      <div class="form-group col-md-6">
-        <label for="recipe_ingredients">Ingredients</label>
-        <textarea type="text" name="recipe_ingredients" class="form-control validate" id="recipe_ingredients" required></textarea>
-      </div>
-    </div>
-    <div class="form-row">  
-      <div class="form-group col-md-6">
-        <label for="recipe_method">Recipe Method</label>
-        <textarea type="text" name="recipe_method" class="form-control validate" id="recipe_method" required></textarea>
-      </div>
-    </div>
-    <div class="form-row"> 
-      <div class="form-group col-md-6">
-        <label for="recipe_cooking_time">Total Cooking time (minutes)</label>
-        <input type="text" name="recipe_cooking_time" 
-         class="form-control validate" id="recipe_cooking_time">
-      </div>
-    </div>
-    <div class ="form-row">
-      <div class=" col s12 center-align">
-        <button>
-            <a  class="btn btn-primary" type="submit">Submit recipe</a>
-        </button>
-      </div>  
-    </div>
-</form>
-
+<div class="add_recipe_form row">
+    <form class="col s12 col col-md-6" method="POST" action="{{ url_for("add_recipe")}}">
+        <div class="form-row ">
+          <div class="form-group col-md-6">
+            <label for="recipe_title">Recipe Title</label>
+            <input type="text" name="recipe_title" class="form-control validate" id="recipe_title" minlength="5" maxlength="50" required>
+          </div>
+        </div>
+        <div class="form-row"> 
+          <div class="form-group col-md-6">
+            <label for="recipe_image_url">Recipe Image Url</label>
+            <input type="text" name="recipe_image_url" class="form-control validate" id="recipe_image_url">
+          </div>
+        </div>
+        <div class="form-row"> 
+          <div class="form-group col-md-6">
+            <label for="recipe_ingredients">Ingredients</label>
+            <textarea type="text" name="recipe_ingredients" class="form-control validate" id="recipe_ingredients" required></textarea>
+          </div>
+        </div>
+        <div class="form-row">  
+          <div class="form-group col-md-6">
+            <label for="recipe_method">Recipe Method</label>
+            <textarea type="text" name="recipe_method" class="form-control validate" id="recipe_method" required></textarea>
+          </div>
+        </div>
+        <div class="form-row"> 
+          <div class="form-group col-md-6">
+            <label for="recipe_cooking_time">Total Cooking time (minutes)</label>
+            <input type="text" name="recipe_cooking_time" 
+            class="form-control validate" id="recipe_cooking_time">
+          </div>
+        </div>
+        <div class ="form-row">
+          <div class=" col s12 center-align">
+            <button>
+                <a  class="btn btn-primary" type="submit">Submit recipe</a>
+            </button>
+          </div>  
+        </div>
+    </form>
+</div>
 
 
 

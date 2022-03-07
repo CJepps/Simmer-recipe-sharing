@@ -16,10 +16,9 @@
                     <h3 class="section-subheading text-muted">Explore now</h3>
                 </div>
 
-                <form  action="{{ url_for('search') }}" method= "post" class=" col-md-4 input-group d-flex justify-content-center" id="searchbar">                      <!--search bar for recipes. taken from https://mdbootstrap.com/docs/standard/forms/search/-->
+                <form  action="{{ url_for('search') }}" method= "post" class=" col-md-4 input-group d-flex justify-content-center searchbar" id="searchbar">                      <!--search bar for recipes. taken from https://mdbootstrap.com/docs/standard/forms/search/-->
                     <div class="form-outline">
-                      <input type="text" id="query" name="query" class="form-control validate" minlength="3" required placeholder="search recipe by title or ingredients"/>
-                      <label class="form-label" for="query">Search</label>
+                      <input type="text" id="query" name="query" class="form-control validate" minlength="3" required placeholder="search recipe"/>
                     </div>
                     <div>
                         <button type="submit" class="btn btn-primary"> 

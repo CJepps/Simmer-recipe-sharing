@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
+{% if session.username %}
 
 <div class="container Card" style="width: 18rem;">
     
@@ -53,5 +54,5 @@
 
 
 
-
+{% endif %}
 {% endblock %}
