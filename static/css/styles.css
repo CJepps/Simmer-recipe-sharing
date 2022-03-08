@@ -11826,10 +11826,14 @@ form {
 
 
 main.container-fluid {
-  margin-top: 20vh;
-  margin-bottom: 10vh;
   height: auto;
 }
+
+.login_form_container {
+  margin-top: 20vh;
+  margin-bottom: 10vh;
+}
+
 
 .add_recipe_form {
   padding-top: 10vh;
