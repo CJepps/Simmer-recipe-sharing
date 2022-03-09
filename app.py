@@ -51,7 +51,8 @@ def login():
 
         if existing_user:
             # checks password matches user input
-            if check_password_hash(existing_user["password"], request.form.get("password")):
+            if check_password_hash(existing_user["password"],
+                                request.form.get("password")):
                 session["user"] = request.form.get("username").lower()
                 flash("Welcome, {}".format(request.form.get("username")))
                 return redirect(url_for(
@@ -77,7 +78,8 @@ def profile(username):
 
     # finds a users recipe based on username
     user_recipes = \
-        mongo.db.recipes.find({'created_by': username}).sort([('recipe_title', 1)])
+        mongo.db.recipes.find(
+            {'created_by': username}).sort([('recipe_title', 1)])
 
     if session["user"]:
         return render_template(
@@ -108,11 +110,11 @@ def register():
             flash("Username already exists")
             return redirect(url_for("register"))
 
-        register = {
+        register_user = {
             "username": request.form.get("username").lower(),
             "password": generate_password_hash(request.form.get("password"))
         }
-        mongo.db.users.insert_one(register)
+        mongo.db.users.insert_one(register_user)
 
         # put the new user into 'session' cookie
         session["user"] = request.form.get("username").lower()
