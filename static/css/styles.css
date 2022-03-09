@@ -11810,9 +11810,10 @@ section#contact form#contactForm :-ms-input-placeholder {
 
 form { 
   margin: 0 auto; 
-  width:250px;
+  text-align: -webkit-center;
   margin-top: 25px;
   padding-top: 25px;
+  padding-bottom: 11vh;
   }
 
   main.container-fluid {
@@ -11824,6 +11825,7 @@ form {
 
 .login_form_container {
   margin-bottom: 10vh;
+  padding-top: 22vh;
 }
 
 
@@ -11835,6 +11837,7 @@ form {
 
 .searchbar {
   align-items: end;
+  margin-top: 10vh;
 }
 
 .profile-cards {
@@ -11843,4 +11846,9 @@ form {
 
 .link-text-color-blue {
   color: #087990;
+}
+
+.form-title {
+  padding-top: 15vh;
+  text-align: center;
 }
