@@ -11852,3 +11852,7 @@ form {
   padding-top: 15vh;
   text-align: center;
 }
+
+.recipe-header {
+  margin-top: 10vh;
+}

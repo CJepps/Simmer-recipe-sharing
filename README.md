@@ -32,7 +32,7 @@
 
 ### Strategy
 
-The main requirements of this project was to create a recipe sharing platform that appeals to a large audience of home cooks. To achieve this, the website needs to be simple to use and understand and also has to look visually appealing. 
+The main requirements of this project was to create a recipe sharing platform that appeals to a large audience of home cooks. To achieve this, the website needs to be simple to use and understand and also has to look visually appealing. One major consideration for the project was allowing each user to create, read, update, and delete recipes (CRUD).
 
 ### User stories
 
@@ -41,15 +41,11 @@ As a User I want ....
 - To view the site from a range of devices with different resolutions  
 - To be able to easily navigate the website and find my appropriate section
 - To be able to create a profile in which to create and edit my own recipes  
-- To be able to delete only my own recipes 
+- To be able to delete only my own recipes
+- To be able to view other user's recipes without needing to register  
 - To view recipes that have been created by other users without signing up
 - To be able to search for other user's recipes by keywords
 
-As a Business I want ....
-
-- The landing page to be eyecatching and attractive to entice users to sign up
-- The potential to advertise cooking equipment based on the equipment required in the recipe 
-- The website to be fully responsive on all devices and browsers to appeal to all users
 
 ### Scope
 
@@ -58,15 +54,15 @@ As a Business I want ....
 - Form for registered users to use to submit recipe details.
 - Functionality for registered users to Create, read, update, and delete (CRUD) recipes.
 - Recipe section that displays users' recipes as a gallery of cards.
-- Recipe section search bar that alows users to search for recipes based on keywords.
-- login/signup forms that alow users to access their recipes to edit using a password. 
+- Recipe section search bar that allows users to search for recipes based on keywords.
+- Login/signup forms that allow users to access their recipes to edit using a password. 
 
 
 
 ### Design
 
 #### Framework
-I chose to use a bootstrap template to enable me to spend more development time writing the code for the backend of the website. I would then write custom html and css to personalise the website. 
+I chose to use a bootstrap template to enable me to spend more development time writing the code for the backend of the website. I would then write custom HTML and CSS to personalize the website. 
 #### Color scheme
 
 I used the website: Coolers to create a color palette for my website. After selecting an appropriate Hero image I could use this to generate a color palette. I wanted the website to look fresh and vibrant to complement the ingredients used in the recipes. 
@@ -127,7 +123,31 @@ You can view the wireframes used for this project [here](https://github.com/CJep
 13. PyMongo 3.12.0
 * used to interact between python and MongoDB 
 ---
-## Testing 
+## Testing(against user stories) 
+I manually tested the website with debugger.
+```python
+debug=True
+```
+Whenever the app crashed, debugger displayed an error message that made it clear what was causing the error. I was able to resolve issues by going back to the routes and templates and examining the relevant code.
+
+**User Registration**
+To test this, I created my own account and tested website features with it. I can log in, add, edit, and delete my own recipes. I also made test accounts to see if it was possible to delete or edit another user's recipes from another account.
+
+**To view the site from a range of devices with different resolutions**
+
+**To be able to easily navigate the website and find my appropriate section**
+
+**To be able to create a profile in which to create and edit my own recipes**
+
+**To be able to delete only my own recipes**
+
+**To be able to view other user's recipes without needing to register**
+
+**To view recipes that have been created by other users without signing up**
+
+**To be able to search for other user's recipes by keywords**
+
+
 ### Validator testing 
 
 
@@ -139,7 +159,14 @@ You can view the wireframes used for this project [here](https://github.com/CJep
 - [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) -No errors. Validator results can be viewed [here](http://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fsimmer-recipes.herokuapp.com%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=)
 
 **JavaScript**
-- [Esprima](https://esprima.org/demo/validate.html) - No Errors. Code is syntactically valid. The only JavaScript in this project was provided by the bootstrap template for navbar shrinking 
+- [Esprima](https://esprima.org/demo/validate.html) - No Errors. Code is syntactically valid. The only JavaScript in this project was provided by the bootstrap template for navbar shrinking
+
+## Further testing 
+
+### Browser compatibility 
+* Lambda test was used to test the website across a range of browsers.
+* Manual testing was also undertaken using DevTools in Google Chrome to test responsiveness at different resolutions. 
+
 
 ---
 # Deployment
