@@ -122,10 +122,102 @@ You can view the wireframes used for this project here
 * used as a non relational database to store backend data
 13. PyMongo 3.12.0
 * used to interact between python and MongoDB 
-### Front end 
-### Back end
-### Libraries 
 ---
 ## Testing 
+
 ---
-## Deployment 
+# Deployment
+
+## Local Deployment
+(created using tawnygoody's Tarmachan [readme](https://github.com/Tawnygoody/Tarmachan/blob/main/README.md) as a guide)
+
+Before deploying the project there are some requirements to be set up first.
+
+First ensure the following are set up on your chosen IDE:
+- [PIP3](https://pypi.org/project/pip/) Python package installer. 
+- [Python 3.6](https://www.python.org/downloads/release/python-360/) or higher.
+- [Git](https://git-scm.com/) version control.
+- [MongoDB Atlas](https://www.mongodb.com/cloud/atlas) to create database
+
+
+To set the project up locally you can follow the following steps: 
+
+1. Navigate to the repository - [Simmer repository](https://github.com/CJepps/Simmer-recipe-sharing)
+
+2. Click the code dropdown button, ensure the HTTPS tab is selected in the dropdown and copy the url. 
+
+3. In your IDE navigate to the desired directory. 
+
+4. Open the terminal and enter the following code: 
+    - ```
+        git clone https://github.com/CJepps/Simmer-recipe-sharing.git
+        ``` 
+
+5. To install the required dependencies needed to run the application type the following into the terminal: 
+    - ```
+        pip3 install -r requirements.txt
+        ```
+
+6. Environment variables will then need to be set up. This can be done in a couple of ways:
+- Create a **.env** file with the connection to your MongoDB database, and a secret key. It should look something like this:
+```
+MONGO_URI='Your Mongo URI Details'
+SECRET_KEY='Your secret key' 
+```  
+- Create a **.flaskenv** file, specifying the following:
+    - `FLASK_APP=run.py`
+    - `FLASK_ENV=development`
+- Install all required modules with the command:
+    - `sudo -H pip3 -r requirements.txt`
+- Create a new database on MongoDB and name it simmerDB. In the database, create the following two collections:
+
+**user**
+```
+_id: <ObjectId>
+username: <String>
+password: <String>
+
+```
+**recipes**
+```
+_id: <ObjectId>
+recipe_title: <String>
+recipe_image_url: <String>
+recipe_ingredients: <String>
+recipe_method: <String>
+recipe_cooking_time: <String>
+created_by: <String>
+
+```
+
+- You can now run the application by running the following command:
+    - `flask run`
+    - The website will run now on *localhost* `http://127.0.0.1:5000` 
+
+
+
+## Deployment to Heroku
+(created using andreasdk - dcd-recipes [readme](https://github.com/andreasdk/dcd-recipes/blob/master/README.md#local-deployment) as a guide)
+
+The app can be deployed via [Heroku](https://www.heroku.com/). To deploy, you need to do the following:
+
+- In the terminal, create a `requirements.txt` file using the command `pip freeze > requirements.txt`.
+- In the terminal, create a `Procfile` by running the `echo web: python app.py > Procfile` command.
+- Push these files to your GitHub repository.
+- Create a new app on [Heroku dashboard](https://dashboard.heroku.com/apps), give it a name and set the region to whichever is closest to you.
+- Link the Heroku app to your GitHub repository.
+- Set the config vars as follows:
+
+| Key | Value |
+ --- | ---
+DEBUG | FALSE
+IP | 0.0.0.0
+MONGO_URI | `mongodb+srv://<username>:<password>@<cluster_name>-qtxun.mongodb.net/<database_name>?retryWrites=true&w=majority`
+PORT | 5000
+SECRET_KEY | `<your_secret_key>`
+
+The MONGO_URI and SECRET_KEY should match the ones in your **.env** file.
+
+- Click 'Deploy' in the Heroku Dashboard, and select 'enable automatic deployment'.
+
+- It should now be possible to launch the app via Heroku.
