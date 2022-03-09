@@ -13,7 +13,6 @@
 </div>
 
 <div class="container">
-  <!--User account sidebar-->
   <div class="row user_account">
     <!--User recipe card if exists/ else add recipe button-->
     <div class="col-md-9">
@@ -21,13 +20,12 @@
         <h2 class="heading-primary">{{ username }}'s Recipes</h2>
         <div class="container-fluid">
             <div class="row">
-              {% for recipe in recipes %}
-                {% if session.user|lower == recipe.created_by|lower  %}
+              {% for user_recipe in user_recipes %}
                 <div class="col-sm-12 col-md-6 my-3">
                     <div class="card ">
-                        <img src="{{ recipe.recipe_image_url }}" alt="Recipe Image" class="img-fluid">
+                        <img src="{{ user_recipe.recipe_image_url }}" alt="Recipe Image" class="img-fluid">
                         <div>
-                            <h6 class="card_title">{{ recipe.recipe_title }}</h6>   
+                            <h6 class="card_title">{{ user_recipe.recipe_title }}</h6>   
                         </div>
                     </div>
                 </div>
@@ -37,8 +35,7 @@
                   <h3 class="heading mb-5">Create one here.</h3>
                   <a class="btn btn-primary" href="{{ url_for('add_recipe')}}" role="button">Add Recipe</a>
                 </div>
-                {% endif %}
-              {% endfor%}
+              {% endfor %}
             </div>
         </div>
       </div>

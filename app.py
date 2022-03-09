@@ -75,8 +75,21 @@ def profile(username):
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
 
+
+    """
+    finds a users recipe based on username
+    and sorts by each recipes name.
+    """
+
+    user_recipes = \
+        mongo.db.recipes.find({'created_by': username}).sort([('recipe_title', 1)])
+
     if session["user"]:
-        return render_template("profile.html", username=username)
+        return render_template(
+            'profile.html',
+            username=username,
+            user_recipes=user_recipes,
+            )
 
     return redirect(url_for("login"))
 
