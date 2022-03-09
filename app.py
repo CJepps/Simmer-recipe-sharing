@@ -75,12 +75,7 @@ def profile(username):
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
 
-
-    """
-    finds a users recipe based on username
-    and sorts by each recipes name.
-    """
-
+    # finds a users recipe based on username
     user_recipes = \
         mongo.db.recipes.find({'created_by': username}).sort([('recipe_title', 1)])
 
