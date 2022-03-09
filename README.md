@@ -124,6 +124,18 @@ You can view the wireframes used for this project here
 * used to interact between python and MongoDB 
 ---
 ## Testing 
+### Validator testing 
+
+
+**HTML**
+- [W3C HTML Validator](https://validator.w3.org) 
+
+
+**CSS**
+- [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) 
+
+**JavaScript**
+- [Esprima](https://esprima.org/demo/validate.html) - No Errors. Code is syntactically valid. The only JavaScript in this project was provided by the bootstrap template for navbar shrinking 
 
 ---
 # Deployment
@@ -135,7 +147,7 @@ Before deploying the project there are some requirements to be set up first.
 
 First ensure the following are set up on your chosen IDE:
 - [PIP3](https://pypi.org/project/pip/) Python package installer. 
-- [Python 3.6](https://www.python.org/downloads/release/python-360/) or higher.
+- [Python 3.8.12](https://www.python.org/downloads/release/python-360/) or higher.
 - [Git](https://git-scm.com/) version control.
 - [MongoDB Atlas](https://www.mongodb.com/cloud/atlas) to create database
 
