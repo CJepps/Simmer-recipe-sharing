@@ -132,11 +132,11 @@ You can view the wireframes used for this project [here](https://github.com/CJep
 
 
 **HTML**
-- [W3C HTML Validator](https://validator.w3.org) 
+- [W3C HTML Validator](https://validator.w3.org) - No errors. "Document checking completed. No errors or warnings to show". 
 
 
 **CSS**
-- [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) 
+- [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) -No errors. Validator results can be viewed [here](http://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fsimmer-recipes.herokuapp.com%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=)
 
 **JavaScript**
 - [Esprima](https://esprima.org/demo/validate.html) - No Errors. Code is syntactically valid. The only JavaScript in this project was provided by the bootstrap template for navbar shrinking 
