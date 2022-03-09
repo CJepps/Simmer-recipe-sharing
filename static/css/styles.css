@@ -763,7 +763,6 @@ progress {
 
 .col-6 {
   flex: 0 0 auto;
-  width: 50%;
 }
 
 .col-7 {
@@ -11822,15 +11821,10 @@ form {
     padding-top: 0;
     padding-left: 0;
     padding-right: 0;
-}
-
-
-main.container-fluid {
-  height: auto;
+    height: auto;
 }
 
 .login_form_container {
-  margin-top: 20vh;
   margin-bottom: 10vh;
 }
 
@@ -11843,4 +11837,12 @@ main.container-fluid {
 
 .searchbar {
   align-items: end;
+}
+
+.profile-cards {
+  margin-bottom: 5vh;
+}
+
+.link-text-color-blue {
+  color: #087990;
 }
