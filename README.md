@@ -1,4 +1,7 @@
-# Simmer - Share your culinary secrets! 
+# [Simmer - Share your culinary secrets!](https://simmer-recipes.herokuapp.com/)
+
+<img src="static/assets/img/amiresponsive.PNG">
+
 ---
 ## Table of Contents
 1. [**UX**](#ux)
@@ -18,47 +21,6 @@
 
 3. [**Technologies Used**](#technologies-used)
    
-# Technologies used 
-## Languages
----
-1. HTML5
-2. CSS3 
-3. JavaScript
-4. Python 3.6.8
-
-## Additional Frameworks, Libraries, and Programs used
----
-3. Bootstrap 4.4.1
-* Used the grid system to aid with the responsiveness of the website
-4. Font awesome
-* Used to provide icons for the website
-5. Git
-* used for version control
-6. GitHub
-* used to store pushed code in a repository
-7. Balsamiq
-* Used to create wireframes at the start of the project
-8. jQuery 
-* included with bootstrap. 
-9. [Googlefonts CDN](https://fonts.google.com/) 
-* used to import 'Righteous' and 'Montserrat' fonts to style text
-10. [amiresponsive](http://ami.responsivedesign.is/)
-* used to create mockups of the website at different resolutions (for the first image of readme)
-11. LambdaTest
-* used to test responsiveness on a range of browsers 
-12. MongoDB Atlas
-* used as a non relational database to store backend data
-13. PyMongo 3.12.0
-* used to interact between python and MongoDB 
-# Testing
----
-
-4. [**Testing**](#testing)
-    
-
-5. [**Deployment**](#deployment)
-    
-
 
 ---
 
@@ -128,6 +90,38 @@ You can view the wireframes used for this project here
 ### Features left to implement 
 ---
 ## Technologies used
+ 
+## Languages
+---
+1. HTML5
+2. CSS3 
+3. JavaScript
+4. Python 3.6.8
+
+## Additional Frameworks, Libraries, and Programs used
+---
+3. Bootstrap 4.4.1
+* Used the grid system to aid with the responsiveness of the website
+4. Font awesome
+* Used to provide icons for the website
+5. Git
+* used for version control
+6. GitHub
+* used to store pushed code in a repository
+7. Balsamiq
+* Used to create wireframes at the start of the project
+8. jQuery 
+* included with bootstrap. 
+9. [Googlefonts CDN](https://fonts.google.com/) 
+* used to import 'Righteous' and 'Montserrat' fonts to style text
+10. [amiresponsive](http://ami.responsivedesign.is/)
+* used to create mockups of the website at different resolutions (for the first image of readme)
+11. LambdaTest
+* used to test responsiveness on a range of browsers 
+12. MongoDB Atlas
+* used as a non relational database to store backend data
+13. PyMongo 3.12.0
+* used to interact between python and MongoDB 
 ### Front end 
 ### Back end
 ### Libraries 
