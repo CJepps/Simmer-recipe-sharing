@@ -87,7 +87,84 @@ You can view the wireframes used for this project [here](https://github.com/CJep
 ---
 ## Features
 ### Existing Features
-### Features left to implement 
+<img src="/workspace/Simmer-recipe-sharing/static/assets/img/readme-images/screenshots/homepage-non-user.PNG" alt="Navbar Desktop" width="800">
+
+**Navbar**
+- The Navbar persists throughout the site and is visible on all pages. Users who are not logged in will only see a limited menu as shown below. On smaller screens the navigation links collapse into a dropdown menu for ease of use. The buttons used for the navbar contrast nicely with the header and enable them to be easily viewed. 
+
+<img src="/workspace/Simmer-recipe-sharing/static/assets/img/readme-images/screenshots/navbar-non-user.PNG" alt="Navbar Default Desktop" width="800">
+
+- Visitors who are not logged in, or who have no account see the following navbar links.
+    1. Home
+    3. Login
+    4. Register 
+
+<img src="/workspace/Simmer-recipe-sharing/static/assets/img/readme-images/screenshots/navbar-user.PNG" alt="Navbar Signed In Desktop" width="800">
+
+- Logged in users see the following navbar links.
+    1. Home
+    2. Recipes
+    3. Add Recipe
+    4. Profile
+    5. Logout 
+        
+<img src="/workspace/Simmer-recipe-sharing/static/assets/img/readme-images/screenshots/register-success.PNG" alt="Successful User Registration" width="800">
+
+**Account Registration**
+- On clicking the registration button the user is taken to a registration page where they can enter their preferred username and password. On a successful registration a message will flash notifying the user if this. The username must be unique and fit the character max length specified. The password too must comply with the form validation to be accepted. A message below the form allows users to switch to the login form if they are already a member and have come to the page in error.
+
+<img src="/workspace/Simmer-recipe-sharing/static/assets/img/readme-images/screenshots/login-success.PNG" alt="Successful User Login" width="800">
+
+**Account Login**
+- On clicking the login button the user is taken to a login page where they can enter their username and password to enter their profile. On a successful login, the user will be taken to their profile which displays the recipes they have added. Form validation during login ensures that users enter both their password and their username, otherwise the form will notify the user of this. A message below the form allows users to switch to the registration form if they are not yet a member and have come to the page in error.
+
+
+<img src="/workspace/Simmer-recipe-sharing/static/assets/img/readme-images/screenshots/navbar-user.PNG" alt="User Logout" width="800">
+
+**Account Logout**
+- On clicking the logout button in the navbar, a signed-in user will be logged out of their account and redirected to the login page 
+
+<img src="/workspace/Simmer-recipe-sharing/static/assets/img/readme-images/screenshots/all-recipes.PNG" alt="View All Recipes" width="800">
+
+**View All Recipes**
+- All users are able to view submitted recipes using the searchbar in the home page. A gallery of relevant recipe cards is then presented to the user which can be clicked on to proceed to the recipe details page. Registered users are able to edit and delete recipes only if they are the user that created the recipe. A searchbar is provided on this page to filter recipes on any field present in the recipe details. On clicking 'reset' the full gallery is revealed
+
+<img src="/workspace/Simmer-recipe-sharing/static/assets/img/readme-images/screenshots/profile.PNG" alt="View All Recipes" width="800">
+
+**View recipes in user profile**
+- Upon logging in to their profile, users are redirected to their profile page. Here, a gallery of the specific user's recipes are displayed. These can be selected to take the user to the individual recipe's detail page.  
+
+<img src="/workspace/Simmer-recipe-sharing/static/assets/img/readme-images/screenshots/recipe.PNG" alt="View a single recipe" width="800">
+
+**View A Single Recipe**
+- When a user clicks on a recipe card or the "go to recipe" button at the bottom of the card, they are taken to the recipe details page. This displays the recipe image, title, cooking time, ingredients, and recipe instructions.
+
+<img src="/workspace/Simmer-recipe-sharing/static/assets/img/readme-images/screenshots/search-recipes.PNG" alt="search recipes" width="800">
+
+**Search For Recipes**
+- Searchbars are present in the homepage and recipes pages. A user can enter a keyword to bring up a selection of relevant recipe cards by submitting the query.  
+
+<img src="/workspace/Simmer-recipe-sharing/static/assets/img/readme-images/screenshots/add-recipe.PNG" alt="create recipes" width="800">
+
+<img src="/workspace/Simmer-recipe-sharing/static/assets/img/readme-images/screenshots/no-recipes.PNG" width="800" alt="no recipes">
+
+**Create A Recipe**
+- A registered user has the option to create a new recipe and add it to the database for other users to view. If a user signs in and hasn't created any recipes, they are prompted by a message and button to add a new recipe.
+
+<img src="/workspace/Simmer-recipe-sharing/static/assets/img/readme-images/screenshots/edit-recipe.PNG" alt="Update a recipe" width="800">
+
+**Update A Recipe**
+- If a User is registered as the creator of the recipe then they have the option to edit and update the recipe. A button is presented to these users in the recipe's gallery as well as on the recipe details page.
+
+<img src="/workspace/Simmer-recipe-sharing/static/assets/img/readme-images/screenshots/delete-recipe.PNG" alt="View A Single Recipe" width="800">
+
+**Delete A Recipe**
+ - If a User is registered as the creator of the recipe then they have the option to delete the recipe. A button is presented to these users in the recipe's gallery as well as on the recipe details page.
+
+
+### Features left to implement
+
+
 ---
 ## Technologies used
  
@@ -159,7 +236,9 @@ To test this, I created my own account and tested website features with it. I ca
 - [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) -No errors. Validator results can be viewed [here](http://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fsimmer-recipes.herokuapp.com%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=)
 
 **JavaScript**
-- [Esprima](https://esprima.org/demo/validate.html) - No Errors. Code is syntactically valid. The only JavaScript in this project was provided by the bootstrap template for navbar shrinking
+- [Esprima](https://esprima.org/demo/validate.html) - No Errors. Code is syntactically valid. The only JavaScript in this project was provided by the bootstrap template for navbar shrinking. Validator results here
+
+<img src="/workspace/Simmer-recipe-sharing/static/assets/img/readme-images/validator/js-validator.PNG" alt="View A Single Recipe" width="800">
 
 ## Further testing 
 
