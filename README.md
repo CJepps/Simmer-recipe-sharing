@@ -5,9 +5,9 @@
 ---
 ## Table of Contents
 1. [**UX**](#ux)
-    - [**Strategy**](#Strategy)
+    - [**Strategy**](#strategy)
     - [**User Stories**](#user-stories)
-    - [**Scope**](#Scope)
+    - [**Scope**](#scope)
     - [**Design**](#design)
         - [**Framework**](#framework)
         - [**Color Scheme**](#color-scheme)
@@ -20,6 +20,10 @@
     - [**Features Left to Implement**](#features-left-to-implement)
 
 3. [**Technologies Used**](#technologies-used)
+
+4. [**Testing**](#testing)
+
+5. [**Deployment**](#deployment)
    
 
 ---
@@ -82,7 +86,7 @@ For this project I chose to stick to two fonts to maintain consistency across th
 
 ### Wireframes
 
-You can view the wireframes used for this project here
+You can view the wireframes used for this project [here](https://github.com/CJepps/Simmer-recipe-sharing/tree/main/static/assets/img/readme-images/wireframes)
  
 ---
 ## Features
