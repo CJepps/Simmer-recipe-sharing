@@ -238,7 +238,7 @@ To test this, I created my own account and tested website features with it. I ca
 **JavaScript**
 - [Esprima](https://esprima.org/demo/validate.html) - No Errors. Code is syntactically valid. The only JavaScript in this project was provided by the bootstrap template for navbar shrinking. Validator results here
 
-<img src="/workspace/Simmer-recipe-sharing/static/assets/img/readme-images/validator/js-validator.PNG" alt="View A Single Recipe" width="800">
+<img src="static/assets/img/readme-images/validator/js-validator.PNG" alt="JavaScript valdation testing" width="800">
 
 ## Further testing 
 
