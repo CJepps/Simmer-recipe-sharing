@@ -164,7 +164,11 @@ You can view the wireframes used for this project [here](https://github.com/CJep
 
 ### Features left to implement
 
+#### Recommended utensils
+- it would be great to add functionality so that users could input what utensils are required. Perhaps this could be combined with links to shopping pages to purchase those utensils.
 
+#### Deleting accounts
+- In the future it would be good to add the option for users to completely delete their account. 
 ---
 ## Technologies used
  
@@ -196,7 +200,7 @@ You can view the wireframes used for this project [here](https://github.com/CJep
 11. LambdaTest
 * used to test responsiveness on a range of browsers 
 12. MongoDB Atlas
-* used as a non relational database to store backend data
+* used as a non-relational database to store backend data
 13. PyMongo 3.12.0
 * used to interact between python and MongoDB 
 ---
@@ -205,7 +209,7 @@ I manually tested the website with debugger.
 ```python
 debug=True
 ```
-Whenever the app crashed, debugger displayed an error message that made it clear what was causing the error. I was able to resolve issues by going back to the routes and templates and examining the relevant code.
+Whenever the app crashed I was able to resolve issues by going back to the routes and templates and examining the relevant code by looking at the trace backs in the debugger.
 
 **User Registration**
 To test this, I created my own account and tested website features with it. I can log in, add, edit, and delete my own recipes. I also made test accounts to see if it was possible to delete or edit another user's recipes from another account.
@@ -366,3 +370,11 @@ The MONGO_URI and SECRET_KEY should match the ones in your **.env** file.
 - Click 'Deploy' in the Heroku Dashboard, and select 'enable automatic deployment'.
 
 - It should now be possible to launch the app via Heroku.
+
+## Credits
+
+- [BBC Good Food](https://www.bbcgoodfood.com/) All recipe details and images added to database from here.
+
+- [Shutterstock](https://www.shutterstock.com/) For the main hero image 
+- Code institute tutorial on the TaskManager app
+- [andreasdk dcd-recipes](https://github.com/andreasdk/dcd-recipes) for inspiration on a recipe hosting website 
