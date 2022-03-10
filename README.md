@@ -24,6 +24,8 @@
 4. [**Testing**](#testing)
 
 5. [**Deployment**](#deployment)
+
+6. [**Credits**](#credits)
    
 
 ---
@@ -371,7 +373,7 @@ The MONGO_URI and SECRET_KEY should match the ones in your **.env** file.
 
 - It should now be possible to launch the app via Heroku.
 
-## Credits
+# Credits
 
 - [BBC Good Food](https://www.bbcgoodfood.com/) All recipe details and images added to database from here.
 
