@@ -42,7 +42,7 @@ As a User I want ....
 - To be able to easily navigate the website and find my appropriate section
 - To be able to create a profile in which to create and edit my own recipes  
 - To be able to delete only my own recipes
-- To be able to view other user's recipes without needing to register  
+- To be able to read individual recipe pages for details of a recipe 
 - To view recipes that have been created by other users without signing up
 - To be able to search for other user's recipes by keywords
 
@@ -211,18 +211,26 @@ Whenever the app crashed, debugger displayed an error message that made it clear
 To test this, I created my own account and tested website features with it. I can log in, add, edit, and delete my own recipes. I also made test accounts to see if it was possible to delete or edit another user's recipes from another account.
 
 **To view the site from a range of devices with different resolutions**
+- styling of the website using bootstrap grids enabled me to create an application that looks great on all screen sizes and resolutions. The use of a collapsible navigation menu from bootstrap also helps with navigation on smaller devices   
 
 **To be able to easily navigate the website and find my appropriate section**
+- A clear and easy to view navigation bar is provided in the header. The color of the navigation link buttons has been assigned as to contrast starkly against the dark background. This should make it easier for users to view the links they are interested in. A simplified navigation bar is provided to first time unregistered users, so they are tempted to join as members and unlock further functionality. On mobile resolutions, the navbar is collapsed, enabling easier navigation on smaller screens
 
 **To be able to create a profile in which to create and edit my own recipes**
+- On registering as a user, the user is redirected to their profile page. If the user does not have any submitted recipes, then they are prompted by a message and button to add a recipe. Hopefully this increases the likelihood of users submitting recipes and growing the site! The 'Add Recipe' navigation button will also direct users to the add recipe page whee they can add new recipes. If Users have submitted recipes then they can view these in a gallery of recipe cards here. On clicking an individual recipe card, the user is taken to the particular recipe details page where they are able to edit this by clicking on the 'edit recipe' button.
 
 **To be able to delete only my own recipes**
+- From the recipes gallery or the profile page, users are able to delete their own recipes. The coding checks whether the session username of the user matches that of the created_by field on the recipe database object. This ensures that recipes can only be deleted by their owners.  
 
-**To be able to view other user's recipes without needing to register**
+**To be able to read individual recipe pages for details of a recipe**
+- on clicking 'view recipe' or the image in the recipe card, the user can view the details for a specific recipe 
+
 
 **To view recipes that have been created by other users without signing up**
+- The search bar present on the home page enables users that have not yet signed up to access the full gallery of user submitted recipes. They are not however, permitted to edit or delete other users recipes and do not have a profile page in which to view their recipes. This should hopefully convince users to join as members and submit recipes. 
 
 **To be able to search for other user's recipes by keywords**
+- The implementation of search bars, present on the home page and available on the full recipes view, allows registered and non-register users to search for other users recipes by keywords 
 
 
 ### Validator testing 
@@ -240,7 +248,22 @@ To test this, I created my own account and tested website features with it. I ca
 
 <img src="static/assets/img/readme-images/validator/js-validator.PNG" alt="JavaScript valdation testing" width="800">
 
-## Further testing 
+## Further testing
+
+### CRUD functionality
+
+**Create**
+- I manually tested this functionality by creating test recipes. The 'add recipe' form was also tested for form validation by omitting some fields or adding too many or too few characters.
+
+**Read**
+- Manually tested by clicking on individual recipe cards and checking that all the information was correct 
+
+**Update**
+- Manually tested by using the 'edit recipe' form on existing recipes. I then checked that the new information had been saved to the recipe by going back and checking the same recipe card again.
+
+**Delete**
+- Manually tested by deleting a recipe using the 'delete' button on the product details page. I then checked to see if the recipe still appeared in the recipe gallery.
+
 
 ### Browser compatibility 
 * Lambda test was used to test the website across a range of browsers.
